@@ -21,7 +21,6 @@ import { Auth, SignIn, SignOut } from 'auth-astro/components';
         if (session) {
           return (
             <>
-              <p>Logged in as {session.user.name}</p>
               <SignOut>Sign Out</SignOut>
             </>
           );
