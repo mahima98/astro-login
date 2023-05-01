@@ -12,23 +12,25 @@ import { Auth, SignIn, SignOut } from 'auth-astro/components';
 		<title>Astro login</title>
 	</head>
 
-	<body>
-		<h1>Astro</h1>
-		<a href="/protected">Protected page</a>
+	<body class="flex flex-col justify-center items-center gap-4 h-screen">
+		<div class="flex flex-col justify-center items-center gap-4 border-2 border-yellow-500 p-24 rounded-xl">
+      <h1 class="text-yellow-500 text-5xl">Astro</h1>
+      <a href="/protected" class="underline">Protected page</a>
 
-    <!-- <Auth>
-      {(session: Session) => {
-        if (session) {
-          return (
-            <>
-              <p>Logged in as {session.user.name}</p>
-              <SignOut>Sign Out</SignOut>
-            </>
-          );
-        } else {
-          return <SignIn provider="github">Sign In</SignIn>;
-        }
-      }}
-    </Auth> -->
+      <Auth>
+        {(session: Session) => {
+          if (session) {
+            return (
+              <div class="text-center space-y-4">
+                <p class="text-green-600 text-xl">Logged in as {session.user.name}</p>
+                <SignOut class="bg-yellow-500 px-6 py-2 rounded text-white font-bold text-center">Sign Out</SignOut>
+              </div>
+            );
+          } else {
+            return <SignIn provider="github" class="bg-yellow-500 px-6 py-2 rounded text-white font-bold text-center">Sign In</SignIn>;
+          }
+        }}
+      </Auth>
+    </div>
 	</body>
 </html>
