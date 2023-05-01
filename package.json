@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.3.2"
+    "@astrojs/node": "^5.1.1",
+    "@auth/core": "^0.5.1",
+    "astro": "^2.3.2",
+    "auth-astro": "^3.0.0"
   }
 }
