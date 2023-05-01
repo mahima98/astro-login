@@ -3,16 +3,7 @@ import type { Session } from '@auth/core/types';
 import { Auth, SignIn, SignOut } from 'auth-astro/components';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro login</title>
-	</head>
-
-	<body class="flex flex-col justify-center items-center gap-4 h-screen">
+	<div class="flex flex-col justify-center items-center gap-4 h-screen">
 		<div class="flex flex-col justify-center items-center gap-4 border-2 border-yellow-500 p-24 rounded-xl">
       <h1 class="text-yellow-500 text-5xl">Astro</h1>
       <a href="/protected" class="underline">Protected page</a>
@@ -32,5 +23,4 @@ import { Auth, SignIn, SignOut } from 'auth-astro/components';
         }}
       </Auth>
     </div>
-	</body>
-</html>
+	</div>
