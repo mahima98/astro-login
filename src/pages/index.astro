@@ -16,11 +16,12 @@ import { Auth, SignIn, SignOut } from 'auth-astro/components';
 		<h1>Astro</h1>
 		<a href="/protected">Protected page</a>
 
-    <Auth>
+    <!-- <Auth>
       {(session: Session) => {
         if (session) {
           return (
             <>
+              <p>Logged in as {session.user.name}</p>
               <SignOut>Sign Out</SignOut>
             </>
           );
@@ -28,6 +29,6 @@ import { Auth, SignIn, SignOut } from 'auth-astro/components';
           return <SignIn provider="github">Sign In</SignIn>;
         }
       }}
-    </Auth>
+    </Auth> -->
 	</body>
 </html>
